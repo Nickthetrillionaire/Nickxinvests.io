@@ -1,0 +1,466 @@
+* {
+  padding: 0;
+  margin: 0;
+  background: #111;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  align-items: center;
+  border-bottom: 1px solid rgb(34, 33, 33);
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  background: currentColor;
+  transform: scaleX(0.2);
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  transition: transform 225ms;
+}
+nav ul li a:hover::after {
+  transform: scaleX(0.7);
+  transform-origin: center;
+  height: 2px;
+}
+nav ul li a:hover {
+  color: rgb(134, 128, 128);
+}
+
+div.website-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("./images/forexTrading\ -\ Copy.jpg");
+  height: 500px;
+  align-items: center;
+}
+div.website-heading h1 {
+  margin-top: 30px;
+  flex: 0.7;
+  color: white;
+  background: none;
+  font-size: 60px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+div.transaction {
+  display: flex;
+}
+.withdraw {
+  border-left: 1px solid rgb(85, 85, 85);
+  padding-left: 10px;
+}
+
+.website-heading button {
+  padding: 20px;
+  width: 200px;
+  color: white;
+  font-size: 20px;
+  background: rgb(2, 26, 24);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+.website-heading button:hover {
+  border: 1px solid rgb(112, 107, 107);
+  color: rgb(112, 107, 107);
+  border-radius: 10px;
+}
+div.website-body {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  color: lightgray;
+  height: 200px;
+  align-items: center;
+  border-top: 1px solid rgb(85, 85, 85);
+}
+.website-body-home {
+  display: flex;
+  /* position: absolute; */
+  justify-content: space-evenly;
+}
+.website-home .first-row,
+.second-row,
+.third-row {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 500px;
+  border-radius: 15px;
+  margin: 10px;
+  background-size: cover;
+  color: white;
+  transition: all ease 0.3s;
+  cursor: pointer;
+  z-index: 200;
+}
+.card:hover {
+  border: 1px solid lightgray;
+  opacity: 0.15;
+  transform: scale(1.04);
+}
+
+.firstRow-section-one,
+.firstRow-section-two,
+.firstRow-section-three,
+.firstRow-section-four,
+.firstRow-section-five,
+.firstRow-section-six {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.firstRow-section-one h3,
+.firstRow-section-two h3,
+.firstRow-section-three h3,
+.firstRow-section-four h3,
+.firstRow-section-five h3,
+.firstRow-section-six h3 {
+  position: absolute;
+  text-align: center;
+  transition: all ease-in-out 0.3s;
+  font-size: 50px;
+  background: none;
+  color: orange;
+  z-index: 100;
+}
+.firstRow-section-one h2,
+.firstRow-section-two h2,
+.firstRow-section-three h2,
+.firstRow-section-four h2,
+.firstRow-section-five h2,
+.firstRow-section-six h2 {
+  position: absolute;
+  color: orangered;
+  bottom: 30px;
+  left: 30px;
+}
+
+/* Forex Trading Component */
+.forex-trading-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  border-bottom: 1px solid rgb(61, 61, 61);
+}
+.forex-trading-header h1 {
+  color: #fff;
+  font-size: 60px;
+  color: rgb(255, 74, 8);
+}
+.forex-trading-middle {
+  display: flex;
+  height: 400px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.account {
+  display: flex;
+  justify-content: center;
+  height: 250px;
+  width: 260px;
+  border-top: 10px solid rgb(155, 42, 0);
+  border-bottom: 10px solid rgb(46, 90, 46);
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  border-radius: 50%;
+  align-items: center;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+.account-total:hover,
+.account-deposit:hover,
+.account-daily:hover {
+  border: 1px solid crimson;
+  cursor: pointer;
+}
+
+.account h3,
+span {
+  position: absolute;
+  color: #fff;
+}
+.account span {
+  bottom: 80px;
+  color: orangered;
+}
+.forex-trading-bottom h1 {
+  color: #fff;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+/*forex Overview Container */
+.forex-overview-top {
+  display: flex;
+  height: 70vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.forex-container {
+  display: flex;
+  width: 1000px;
+  height: 100%;
+  align-items: center;
+}
+.container {
+  height: 300px;
+  width: 300px;
+  border-radius: 20px;
+  background: #fff;
+}
+.forex-container .forex-card {
+  z-index: 10;
+  align-self: flex-end;
+  background: lightgray;
+  transform: scale(1.2);
+}
+.forex-overview-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.forex-overview-bottom .forex-row-two,
+.forex-row-one {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 80%;
+  margin-top: 30px;
+}
+/* Crypto Trading Component */
+.Crypto-trading-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  border-bottom: 1px solid rgb(61, 61, 61);
+}
+.Crypto-trading-header h1 {
+  color: #fff;
+  font-size: 60px;
+  color: rgb(8, 255, 20);
+}
+.Crypto-trading-middle {
+  display: flex;
+  height: 400px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.account {
+  display: flex;
+  justify-content: center;
+  height: 250px;
+  width: 260px;
+  border-top: 10px solid rgb(155, 42, 0);
+  border-bottom: 10px solid rgb(46, 90, 46);
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  border-radius: 50%;
+  align-items: center;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+.account-total:hover,
+.account-deposit:hover,
+.account-daily:hover {
+  border: 1px solid crimson;
+  cursor: pointer;
+}
+
+.account h3,
+span {
+  position: absolute;
+  color: #fff;
+}
+.account span {
+  bottom: 80px;
+  color: orangered;
+}
+.Crypto-trading-bottom h1 {
+  color: #fff;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+/*Crypto Overview Container */
+.Crypto-overview-top {
+  display: flex;
+  height: 70vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.Crypto-container {
+  display: flex;
+  width: 1000px;
+  height: 100%;
+  align-items: center;
+}
+.container {
+  height: 300px;
+  width: 300px;
+  border-radius: 20px;
+  background: #fff;
+}
+.Crypto-container .Crypto-card {
+  z-index: 10;
+  align-self: flex-end;
+  background: lightgray;
+  transform: scale(1.2);
+}
+.Crypto-overview-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.Crypto-overview-bottom .Cryptp-row-two,
+.Crypto-row-one {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 80%;
+  margin-top: 30px;
+}
+/*Stocks */
+/* Stocks Trading Component */
+.Stocks-trading-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  border-bottom: 1px solid rgb(61, 61, 61);
+}
+.Stocks-trading-header h1 {
+  color: #fff;
+  font-size: 60px;
+  color: rgb(103, 8, 255);
+}
+.Stocks-trading-middle {
+  display: flex;
+  height: 400px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.account {
+  display: flex;
+  justify-content: center;
+  height: 250px;
+  width: 260px;
+  border-top: 10px solid rgb(155, 42, 0);
+  border-bottom: 10px solid rgb(46, 90, 46);
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  border-radius: 50%;
+  align-items: center;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+.account-total:hover,
+.account-deposit:hover,
+.account-daily:hover {
+  border: 1px solid crimson;
+  cursor: pointer;
+}
+
+.account h3,
+span {
+  position: absolute;
+  color: #fff;
+}
+.account span {
+  bottom: 80px;
+  color: orangered;
+}
+.Stocks-trading-bottom h1 {
+  color: #fff;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+/*Stocks Overview Container */
+.Stocks-overview-top {
+  display: flex;
+  height: 70vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.Stocks-container {
+  display: flex;
+  width: 1000px;
+  height: 100%;
+  align-items: center;
+}
+.container {
+  height: 300px;
+  width: 300px;
+  border-radius: 20px;
+  background: #fff;
+}
+.Stocks-container .Crypto-card {
+  z-index: 10;
+  align-self: flex-end;
+  background: lightgray;
+  transform: scale(1.2);
+}
+.Stocks-overview-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.Stocks-overview-bottom .Stocks-row-two,
+.Stocks-row-one {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 80%;
+  margin-top: 30px;
+}
